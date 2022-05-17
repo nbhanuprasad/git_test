@@ -1,1 +1,2 @@
-# Frontend-Project5
+# tutorial-frontend
+Tutorial Vue frontend
