@@ -1,11 +1,15 @@
 <template>
+
     <h1>Add Lesson</h1>
     <h4>{{ message }}</h4>
     <h4>Tutorial : {{tutorialId}}</h4>
+    
     <v-form>
+      
        <v-text-field
-            label="Title"
-            v-model="lesson.title"
+       
+            label="Album"
+            v-model="lesson.Album"
         />
         <v-text-field
             label="Description"
@@ -34,7 +38,7 @@ export default {
     return {
       lesson: {
         id: null,
-        title: "",
+        Album: "",
         description: "",
         published: false
       },
@@ -44,7 +48,7 @@ export default {
   methods: {
     saveLesson() {
       var data = {
-        title: this.lesson.title,
+        Album: this.lesson.Album,
         description: this.lesson.description,
         tutorialId : this.tutorialId
       };

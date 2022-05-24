@@ -1,7 +1,7 @@
 <template>
     <h2>Tutorial View</h2>
     <h4>{{ message }}</h4>
-    <h3> {{tutorial.title}}</h3>
+    <h3> {{tutorial.Album}}</h3>
     <v-btn color="success" @click="goEditTutorial()"
     >Edit</v-btn>
      <v-btn color="success" @click="goAddLesson(id)"
@@ -10,7 +10,8 @@
      <v-row>
         <v-col  cols="8"
               sm="2">
-            <span class="text-h6">Title</span>
+              
+            <span class="text-h6">Album</span>
         </v-col>
         <v-col  cols="8"
               sm="4">

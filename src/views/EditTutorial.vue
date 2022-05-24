@@ -3,8 +3,8 @@
     <h4>{{ message }}</h4>
     <v-form>
        <v-text-field
-            label="Title"
-            v-model="tutorial.title"
+            label="Album"
+            v-model="tutorial.Album"
         />
         <v-text-field
             label="Description"
@@ -53,7 +53,7 @@ export default {
 
     updateTutorial() {
       var data = {
-        title: this.tutorial.title,
+        Album: this.tutorial.Album,
         description: this.tutorial.description
 
       };

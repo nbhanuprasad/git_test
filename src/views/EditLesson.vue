@@ -5,8 +5,8 @@
 
     <v-form>
        <v-text-field
-            label="Title"
-            v-model="lesson.title"
+            label="Album"
+            v-model="lesson.Album"
         />
         <v-text-field
             label="Description"
@@ -50,7 +50,7 @@ export default {
     },
     saveLesson() {
       var data = {
-        title: this.lesson.title,
+        Album: this.lesson.Album,
         description: this.lesson.description,
         tutorialId : this.lesson.tutorialId
       };

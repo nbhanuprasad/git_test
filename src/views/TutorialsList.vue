@@ -7,20 +7,20 @@
         <v-col  cols="12"
         sm="2">
           <v-btn color = "success"
-            @click="searchTitle"
+            @click="searchAlbum"
           >
             Search
           </v-btn>
         </v-col>
         <v-col col="12" sm="10">
             <v-text-field density="compact" clearable
-              v-model="title"/>
+              v-model="Album"/>
         </v-col> 
       </v-row>
       <v-row>
         <v-col  cols="9"
               sm="2">
-            <span class="text-h6">Title</span>
+            <span class="text-h6">Album</span>
         </v-col>
         <v-col  cols="9"
               sm="4">
@@ -62,8 +62,8 @@ export default {
       tutorials: [],
       currentTutorial: null,
       currentIndex: -1,
-      title: "",
-      message : "Search, Edit or Delete Tutorials"
+      Album: "",
+      message : "Display the list of album"
     };
   },
   components: {
@@ -116,8 +116,8 @@ export default {
         });
     },
     
-    searchTitle() {
-      TutorialDataService.findByTitle(this.title)
+    searchAlbum() {
+      TutorialDataService.findByAlbum(this.Album)
         .then(response => {
           this.tutorials = response.data;
           this.setActiveTutorial(null);

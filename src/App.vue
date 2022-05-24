@@ -8,7 +8,7 @@
                 max-width="40"
                 contain
             ></v-img>
-            <v-app-bar-title  >Tutorial</v-app-bar-title>
+            <v-app-bar-Album  >Tutorial</v-app-bar-Album>
             <v-spacer></v-spacer>
             <v-toolbar-items>
                 <v-btn 
