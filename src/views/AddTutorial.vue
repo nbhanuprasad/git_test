@@ -1,15 +1,24 @@
 <template>
-    <h1>Tutorial Add</h1>
+    <h1>Add Song</h1>
     <h4>{{ message }}</h4>
     <v-form>
        <v-text-field
-            label="Title"
+            label="Song Title"
             v-model="tutorial.title"
+        />
+        <v-text-field
+            label="Track Length"
+            v-model="tutorial.description"
+        />
+        <v-text-field
+            label="Genre"
+            v-model="tutorial.description"
         />
         <v-text-field
             label="Description"
             v-model="tutorial.description"
         />
+        <b-dropdown-item href="#">Action</b-dropdown-item>
         <v-row justify="center">
             <v-col col="2"> </v-col>
             <v-col col="2">

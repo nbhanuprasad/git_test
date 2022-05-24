@@ -8,7 +8,7 @@
                 max-width="40"
                 contain
             ></v-img>
-            <v-app-bar-title  >Tutorial</v-app-bar-title>
+            <v-app-bar-title  >Albums</v-app-bar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items>
                 <v-btn 
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import logo from './assets/oc-logo-white.png'
+import logo from './assets/logo.jpg'
 export default {
   name: 'App',
 

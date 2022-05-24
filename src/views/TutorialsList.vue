@@ -1,6 +1,6 @@
 <template>
 
-    <h1>Tutorial List</h1>
+    <h1>Albums</h1>
     <h4>{{ message }}</h4>
   
       <v-row >
