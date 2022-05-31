@@ -1,45 +1,45 @@
 import { createWebHistory, createRouter } from "vue-router";
+import HomeView from './views/HomeView.vue'
+// import ArtistsView from "./views/ArtistsView.vue";
+import ArtistsView from "./components/Artists.vue";
+import AlbumsView from "./views/AlbumsView.vue";
+import TracksView from "./views/TracksView.vue";
 const routes =  [
   {
     path: "/",
-    alias: "/tutorials",
-    name: "tutorials",
-    component: () => import("./views/TutorialsList.vue")
+    alias: "/home",
+    name: "home",
+    component: HomeView
   },
   {
-    path: "/edit/:id",
-    name: "edit",
-    component: () => import("./views/EditTutorial.vue"),
-    props: true
+    path: "/artists",
+    name: "artists",
+    component: ArtistsView
   },
   {
-    path: "/add",
-    name: "add",
-    component: () => import("./views/AddTutorial.vue")
+    path: "/albums",
+    name: "albums",
+    component: AlbumsView
   },
   {
-    path: "/view",
-    name: "view",
-    component: () => import("./views/ViewTutorial.vue"),
-    props: true
+    path: "/tracks",
+    name: "tracks",
+    component: TracksView
   },
   {
-    path: "/addLesson",
-    name: "addLesson",
-    component: () => import("./views/AddLesson.vue"),
-    props: true
+    path: "/artist/add",
+    name: "artistadd",
+    component: () => import("./components/AddArtist.vue")
   },
   {
-    path: "/editLesson",
-    name: "editLesson",
-    component: () => import("./views/EditLesson.vue"),
-    props: true
-  }
+    path: "/artists/:id",
+    name: "editadd",
+    component: () => import("./components/EditArtist.vue")
+  },
+
 ];
 const router = createRouter({
-  base: process.env.NODE_ENV === 'development' ? '/' : '/tutorial-frontend-1/',
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
-
-export default router;
+export default router

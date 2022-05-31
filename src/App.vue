@@ -1,55 +1,20 @@
-<template>
-    <v-app>
-      <v-app-bar  >
-            <v-img
-                class="mx-2"
-                :src="logo"
-                max-height="40"
-                max-width="40"
-                contain
-            ></v-img>
-            <v-app-bar-title  >Tutorial</v-app-bar-title>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-                <v-btn 
-                    variant="text"
-                    @click="goList"
-                    >
-                  List
-                </v-btn>
-                <v-btn 
-                    variant="text"
-                    @click="goAdd"
-                    >
-                  Add
-                </v-btn>
-            </v-toolbar-items>
-      </v-app-bar>
-      <v-main >
-        <v-container>
-          <router-view />
-        </v-container>
-      </v-main>  
-    </v-app>
-</template>
-
-<script>
-import logo from './assets/oc-logo-white.png'
-export default {
-  name: 'App',
-
-  data: () => ({
-    logo,
-  }),
-  methods: {
-    goAdd() {
-      this.$router.push({ name: 'add' });
-    },
-    goList() {
-      this.$router.push({ name: 'tutorials' });
-    }
-  },
-
-}
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
 </script>
-
+<template>
+<div id="app">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <RouterLink class="text-decoration-none" to="/">
+      <a class="navbar-brand"> Music Library<img alt="Home" class="logo ms-2 mb-1" src="@/assets/icons8-home.svg" width="25" height="25" /></a>
+      </RouterLink>
+    </div>
+  </nav>
+ <RouterView />
+</div>
+</template>
+<script>
+export default {
+  name: "app"
+};
+</script>
