@@ -11,7 +11,7 @@
       </div>
       <div class="form-group">
 
-        <label for="albumIdno">Album Id</label>
+        <label for="albumIdno">Album Name</label>
         <!-- <div>Album Id is {{ track.albumId }}</div> -->
         <select class="form-select" v-model="track.albumId">
           <option disabled value="">Please select one</option>

@@ -1,37 +1,27 @@
 <template>
   <div v-if="currentTrack" class="edit-form">
-          <h2>Tracks</h2>
+    <h2>Tracks</h2>
     <form>
       <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" id="title"
-          v-model="currentTrack.title"
-        />
-      </div>
-      <!-- <div class="form-group">
-        <label for="description">Description</label>
-        <input type="text" class="form-control" id="description"
-          v-model="currentTrack.description"
-        />
+        <input type="text" class="form-control" id="title" v-model="currentTrack.title" />
       </div>
       <div class="form-group">
-        <label><strong>Status:</strong></label>
-        {{ currentTrack.published ? "Published" : "Pending" }}
-      </div> -->
+        <label for="year">Year</label>
+        <input type="text" class="form-control" id="year"
+          v-model="currentTrack.year"
+        />
+      </div>
     </form>
-     <button class="btn btn-sm btn-danger m-1"
-      @click="deleteTrack"
-    >
+    <button class="btn btn-sm btn-danger m-1" @click="deleteTrack">
       Delete
     </button>
-    <button type="submit" class="btn btn-sm btn-success m-1"
-      @click="updateTrack"
-    >
+    <button type="submit" class="btn btn-sm btn-success m-1" @click="updateTrack">
       Update
     </button>
-            <RouterLink to="/tracks"> 
-              <button class="btn btn-sm btn-secondary m-1">back</button>
-        </RouterLink>
+    <RouterLink to="/tracks">
+      <button class="btn btn-sm btn-secondary m-1">back</button>
+    </RouterLink>
     <p>{{ message }}</p>
   </div>
   <div v-else>
@@ -42,7 +32,7 @@
 <script>
 import TrackDataService from "../services/TrackDataService";
 export default {
-  name: "track",
+  name: "edittrack",
   data() {
     return {
       currentTrack: null,
@@ -60,23 +50,6 @@ export default {
           console.log(e);
         });
     },
-    // updatePublished(status) {
-    //   var data = {
-    //     id: this.currentTrack.id,
-    //     title: this.currentTrack.title,
-    //     description: this.currentTrack.description,
-    //     published: status
-    //   };
-    //   TrackDataService.update(this.currentTrack.id, data)
-    //     .then(response => {
-    //       console.log(response.data);
-    //       this.currentTrack.published = status;
-    //       this.message = 'The status was updated successfully!';
-    //     })
-    //     .catch(e => {
-    //       console.log(e);
-    //     });
-    // },
     updateTrack() {
       TrackDataService.update(this.currentTrack.id, this.currentTrack)
         .then(response => {
@@ -109,7 +82,8 @@ export default {
   max-width: 300px;
   margin: 30px 30px;
 }
-label{
+
+label {
 
   font-size: 24px;
 }
