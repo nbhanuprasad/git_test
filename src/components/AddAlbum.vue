@@ -7,7 +7,7 @@
       </div>
       <div class="form-group">
 
-        <label for="artistIdno">Artist Id</label>
+        <label for="artistIdno">Artist Name</label>
         <!-- <div>Artist Id is {{ album.artistId }}</div> -->
         <select class="form-select" v-model="album.artistId">
           <option disabled value="">Please select one</option>

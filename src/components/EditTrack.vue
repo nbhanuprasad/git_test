@@ -11,6 +11,8 @@
         <input type="text" class="form-control" id="year"
           v-model="currentTrack.year"
         />
+        <label>Album Name</label>
+        <input type="text" class="form-control" id="albumid"/>
       </div>
     </form>
     <button class="btn btn-sm btn-danger m-1" @click="deleteTrack">

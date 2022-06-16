@@ -7,6 +7,8 @@
         <input type="text" class="form-control" id="title"
           v-model="currentAlbum.title"
         />
+        <label>Artist Name</label>
+        <input type="text" class="form-control" id="artistid"/>
       </div>
       <!-- <div class="form-group">
         <label for="description">Description</label>
